@@ -95,6 +95,10 @@
 		1B30A5952531BF860040F7EE /* RubberDuck-Speaker */ = {
 			isa = PBXGroup;
 			children = (
+				1B30A5C92531CB2C0040F7EE /* Interactor */,
+				1B30A5C82531CB250040F7EE /* Repository */,
+				1B30A5C52531CB170040F7EE /* UI */,
+				1B30A5C42531CB0B0040F7EE /* AppState */,
 				1B30A5962531BF860040F7EE /* RubberDuck_SpeakerApp.swift */,
 				1B30A5982531BF860040F7EE /* ContentView.swift */,
 				1B30A59A2531BF880040F7EE /* Assets.xcassets */,
@@ -128,6 +132,51 @@
 				1B30A5B52531BF890040F7EE /* Info.plist */,
 			);
 			path = "RubberDuck-SpeakerUITests";
+			sourceTree = "<group>";
+		};
+		1B30A5C42531CB0B0040F7EE /* AppState */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppState;
+			sourceTree = "<group>";
+		};
+		1B30A5C52531CB170040F7EE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1B30A5C62531CB170040F7EE /* Component */,
+				1B30A5C72531CB170040F7EE /* Sceen */,
+			);
+			name = UI;
+			path = "RubberDuck-Speaker/UI";
+			sourceTree = SOURCE_ROOT;
+		};
+		1B30A5C62531CB170040F7EE /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		1B30A5C72531CB170040F7EE /* Sceen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sceen;
+			sourceTree = "<group>";
+		};
+		1B30A5C82531CB250040F7EE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		1B30A5C92531CB2C0040F7EE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
