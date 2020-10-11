@@ -15,6 +15,8 @@
 		1B30A5B42531BF890040F7EE /* RubberDuck_SpeakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5B32531BF890040F7EE /* RubberDuck_SpeakerUITests.swift */; };
 		1B30A5CE2531CCEF0040F7EE /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5CD2531CCEF0040F7EE /* QuestionView.swift */; };
 		1B30A5D32531CCFB0040F7EE /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5D22531CCFB0040F7EE /* AnswerView.swift */; };
+		1B30A5D82532C09A0040F7EE /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5D72532C09A0040F7EE /* AppState.swift */; };
+		1B30A5DD2532C3C00040F7EE /* SpeechAudioInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5DC2532C3C00040F7EE /* SpeechAudioInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		1B30A5B52531BF890040F7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B30A5CD2531CCEF0040F7EE /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		1B30A5D22531CCFB0040F7EE /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
+		1B30A5D72532C09A0040F7EE /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		1B30A5DC2532C3C00040F7EE /* SpeechAudioInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechAudioInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 		1B30A5C42531CB0B0040F7EE /* AppState */ = {
 			isa = PBXGroup;
 			children = (
+				1B30A5D72532C09A0040F7EE /* AppState.swift */,
 			);
 			path = AppState;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 		1B30A5C92531CB2C0040F7EE /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				1B30A5DC2532C3C00040F7EE /* SpeechAudioInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -315,8 +321,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B30A5992531BF860040F7EE /* ContentView.swift in Sources */,
+				1B30A5D82532C09A0040F7EE /* AppState.swift in Sources */,
 				1B30A5CE2531CCEF0040F7EE /* QuestionView.swift in Sources */,
 				1B30A5D32531CCFB0040F7EE /* AnswerView.swift in Sources */,
+				1B30A5DD2532C3C00040F7EE /* SpeechAudioInteractor.swift in Sources */,
 				1B30A5972531BF860040F7EE /* RubberDuck_SpeakerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
