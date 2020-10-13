@@ -17,8 +17,10 @@ class AppState: ObservableObject {
         var recognitionRequest: SFSpeechAudioBufferRecognitionRequest? = SFSpeechAudioBufferRecognitionRequest()
         /// リクエストの実行と、テキストへの変換結果をハンドリングするオブジェクト
         var recognitionTask: SFSpeechRecognitionTask? = nil
-        /// リクエストや録音開始・終了に伴うオーディオからの入力受付を示すステータス
+        /// 録音タスクが利用可能かどうかを保持する変数
         var isEnabled: Bool = false
+        /// 録音中かどうかを保持する変数
+        var isRecording: Bool = false
         /// Speechによって認識された文字を出力してViewに返すための変数
         var text: String = ""
     }

@@ -48,9 +48,11 @@ class SpeechAudioInteractor {
             self.appState.audioObject.audioEngine.stop()
             self.appState.audioObject.recognitionRequest?.endAudio()
             self.appState.audioObject.isEnabled = false
+            self.appState.audioObject.isRecording = false
         } else {
             do {
                 try self.startRecording()
+                self.appState.audioObject.isRecording = true
             } catch {
                 fatalError("error has occured")
             }
@@ -109,6 +111,7 @@ class SpeechAudioInteractor {
                 
                 //self.appState.audioObject.recognitionRequest = nil
                 self.appState.audioObject.recognitionTask = nil
+                self.appState.audioObject.isEnabled = true
             }
         }
     }

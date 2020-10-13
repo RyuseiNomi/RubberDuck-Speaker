@@ -20,14 +20,29 @@ struct QuestionView: View {
                 SpeechAudioInteractor(appState: self.appState).recordButtonTapped()
             }) {
                 Image(systemName: "mic")
+                    .frame(maxWidth: 60, maxHeight: 60)
+                    .imageScale(.large)
+                    .background(self.getButtonColor())
+                    .foregroundColor(.white)
+                    .clipShape(Circle())
             }
-            .frame(minWidth: 0, maxWidth: 200, alignment: .center)
-            .background(Color(red: 255/255, green: 127/255, blue: 80/255))
-            .cornerRadius(10)
-            .shadow(color: Color(red: 173/255, green: 216/255, blue: 230/255), radius: 1, x: 0, y: 5) //lightblue
         }
         .onAppear(perform:{
             SpeechAudioInteractor(appState: self.appState).requetAuthenticationToUseSpeech()
         })
+    }
+    
+    private func getButtonColor() -> Color {
+        if self.appState.audioObject.isRecording {
+            return Color(red: 220/255, green: 20/255, blue: 60/255) // crimson
+        } else {
+            return Color(red: 169/255, green: 169/255, blue: 169/255) // darkgray
+        }
+    }
+}
+
+struct QuestionView_Previews: PreviewProvider {
+    static var previews: some View {
+        QuestionView()
     }
 }
