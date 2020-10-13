@@ -11,12 +11,15 @@ import Speech
 class AppState: ObservableObject {
     
     struct AudioObject {
+        /// デバイスのマイクからinput情報を取得するためのオブジェクト
         var audioEngine = AVAudioEngine()
+        /// デバイスのオーディオから入力された言葉を認識するためのリクエストオブジェクト
         var recognitionRequest: SFSpeechAudioBufferRecognitionRequest? = SFSpeechAudioBufferRecognitionRequest()
-        var recognitionTask: SFSpeechRecognitionTask? = SFSpeechRecognitionTask()
-        var inputNode: AVAudioInputNode?
-        var isEnabledToRecord: Bool = false
-        var isFinal:Bool = false
+        /// リクエストの実行と、テキストへの変換結果をハンドリングするオブジェクト
+        var recognitionTask: SFSpeechRecognitionTask? = nil
+        /// リクエストや録音開始・終了に伴うオーディオからの入力受付を示すステータス
+        var isEnabled: Bool = false
+        /// Speechによって認識された文字を出力してViewに返すための変数
         var text: String = ""
     }
     

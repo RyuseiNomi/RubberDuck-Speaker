@@ -15,18 +15,16 @@ struct QuestionView: View {
     
     var body: some View {
         VStack() {
-            Text("相談する")
-            if self.appState.audioObject.isEnabledToRecord {
-                if self.appState.audioObject.isFinal {
-                    Button(action: {
-                        SpeechAudioInteractor(appState: self.appState).startRecording()
-                    }) {
-                        Text("相談を開始する")
-                    }
-                } else {
-                    Text(self.appState.audioObject.text)
-                }
+            Text(self.appState.audioObject.text)
+            Button(action: {
+                SpeechAudioInteractor(appState: self.appState).recordButtonTapped()
+            }) {
+                Image(systemName: "mic")
             }
+            .frame(minWidth: 0, maxWidth: 200, alignment: .center)
+            .background(Color(red: 255/255, green: 127/255, blue: 80/255))
+            .cornerRadius(10)
+            .shadow(color: Color(red: 173/255, green: 216/255, blue: 230/255), radius: 1, x: 0, y: 5) //lightblue
         }
         .onAppear(perform:{
             SpeechAudioInteractor(appState: self.appState).requetAuthenticationToUseSpeech()
