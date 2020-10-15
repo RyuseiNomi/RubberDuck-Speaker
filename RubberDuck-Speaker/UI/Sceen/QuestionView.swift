@@ -14,38 +14,36 @@ struct QuestionView: View {
     
     var body: some View {
         VStack() {
-            Group {
-                VStack() {
-                    if !self.appState.audioObject.isRecording {
-                        Text("今困っていることを\nアヒルに話してみてください")
-                            .foregroundColor(Color.gray)
-                    } else {
-                        Text("聴いています…")
-                            .foregroundColor(Color.gray)
-                    }
-                    Button(action: {
-                        SpeechAudioInteractor(appState: self.appState).recordButtonTapped()
-                    }) {
-                        Image(systemName: "mic")
-                            .frame(maxWidth: 60, maxHeight: 60)
-                            .imageScale(.large)
-                            .background(self.getButtonColor())
-                            .foregroundColor(.white)
-                            .clipShape(Circle())
-                    }
-                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+            VStack() {
+                if !self.appState.audioObject.isRecording {
+                    Text("今困っていることを\nアヒルに話してみましょう")
+                        .foregroundColor(Color.gray)
+                } else {
+                    Text("聴いています…")
+                        .foregroundColor(Color.gray)
                 }
-                .padding(EdgeInsets(top: 50, leading: 10, bottom: 20, trailing: 10))
-                .frame(width: UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height*0.4, alignment: .center)
-                .background(Baloon(cornerRadius: 20.0))
-                .onAppear(perform:{
-                    SpeechAudioInteractor(appState: self.appState).requetAuthenticationToUseSpeech()
-                })
+                Button(action: {
+                    SpeechAudioInteractor(appState: self.appState).recordButtonTapped()
+                }) {
+                    Image(systemName: "mic")
+                        .frame(maxWidth: 100, maxHeight: 100)
+                        .imageScale(.large)
+                        .background(self.getButtonColor())
+                        .foregroundColor(.white)
+                        .clipShape(Circle())
+                }
+                .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
             }
-                .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height*0.5)
+            .padding(EdgeInsets(top: 50, leading: 10, bottom: 20, trailing: 10))
+            .frame(maxWidth: UIScreen.main.bounds.width*0.8, maxHeight: UIScreen.main.bounds.height*0.25)
+            .background(Baloon(cornerRadius: 20.0))
+            .onAppear(perform:{
+                SpeechAudioInteractor(appState: self.appState).requetAuthenticationToUseSpeech()
+            })
             Duck()
-                .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height*0.5)
+                .frame(maxHeight: UIScreen.main.bounds.height*0.4)
         }
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
     }
     
     private func getButtonColor() -> Color {
