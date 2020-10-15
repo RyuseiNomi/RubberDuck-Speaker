@@ -10,6 +10,7 @@
 		1B14A8512535F060003399CE /* Baloon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14A8502535F060003399CE /* Baloon.swift */; };
 		1B14A8562537F8CF003399CE /* Duck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14A8552537F8CF003399CE /* Duck.swift */; };
 		1B14A85B2538085E003399CE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14A85A2538085E003399CE /* Question.swift */; };
+		1B14A87025383833003399CE /* ConsultResultTextModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14A86F25383833003399CE /* ConsultResultTextModal.swift */; };
 		1B30A5972531BF860040F7EE /* RubberDuck_SpeakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5962531BF860040F7EE /* RubberDuck_SpeakerApp.swift */; };
 		1B30A5992531BF860040F7EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5982531BF860040F7EE /* ContentView.swift */; };
 		1B30A59B2531BF880040F7EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B30A59A2531BF880040F7EE /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		1B14A8502535F060003399CE /* Baloon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baloon.swift; sourceTree = "<group>"; };
 		1B14A8552537F8CF003399CE /* Duck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duck.swift; sourceTree = "<group>"; };
 		1B14A85A2538085E003399CE /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		1B14A86F25383833003399CE /* ConsultResultTextModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultResultTextModal.swift; sourceTree = "<group>"; };
 		1B30A5932531BF860040F7EE /* RubberDuck-Speaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RubberDuck-Speaker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B30A5962531BF860040F7EE /* RubberDuck_SpeakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubberDuck_SpeakerApp.swift; sourceTree = "<group>"; };
 		1B30A5982531BF860040F7EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				1B14A8502535F060003399CE /* Baloon.swift */,
 				1B14A8552537F8CF003399CE /* Duck.swift */,
+				1B14A86F25383833003399CE /* ConsultResultTextModal.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				1B14A85B2538085E003399CE /* Question.swift in Sources */,
 				1B30A5D32531CCFB0040F7EE /* AnswerView.swift in Sources */,
 				1B14A8562537F8CF003399CE /* Duck.swift in Sources */,
+				1B14A87025383833003399CE /* ConsultResultTextModal.swift in Sources */,
 				1B14A8512535F060003399CE /* Baloon.swift in Sources */,
 				1B30A5DD2532C3C00040F7EE /* SpeechAudioInteractor.swift in Sources */,
 				1B30A5972531BF860040F7EE /* RubberDuck_SpeakerApp.swift in Sources */,

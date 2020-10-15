@@ -14,8 +14,12 @@ struct ContentView: View {
     var body: some View {
         if !self.appState.audioObject.isFinished {
             QuestionView()
+                .edgesIgnoringSafeArea(.all)
+                .background(Color(red: 144/255, green: 238/255, blue: 144/255))
         } else {
             AnswerView()
+                .edgesIgnoringSafeArea(.all)
+                .background(Color(red: 144/255, green: 238/255, blue: 144/255))
         }
     }
 }

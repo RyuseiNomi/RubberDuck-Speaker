@@ -9,28 +9,75 @@ import SwiftUI
 
 struct AnswerView: View {
     
+    @State var isShowingModal: Bool = false
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
+        ZStack() {
             VStack() {
-                Group {
-                    VStack() {
-                        Text("アヒルからの答えを聞く")
-                            .foregroundColor(Color.gray)
-                        Button(action: {
-                            Text("tapped")
-                        }) {
-                            Image(systemName: "dot.radiowaves.right")
-                                .frame(maxWidth: 60, maxHeight: 60)
-                                .imageScale(.large)
-                                .foregroundColor(.white)
-                                .background(Color(red: 169/255, green: 169/255, blue: 169/255))
-                                .clipShape(Circle())
+                // 吹き出し
+                HStack() {
+                    Duck()
+                        .frame(maxHeight: UIScreen.main.bounds.height*0.1, alignment: .center)
+                    Group {
+                        VStack() {
+                            Text("アヒルからの答えを聞く")
+                                .font(Font.custom("Helvetica-Light", size: 15))
+                                .foregroundColor(Color.gray)
+                            Button(action: {
+                                //TODO アヒルの鳴き声を鳴らす
+                                return
+                            }) {
+                                Image(systemName: "dot.radiowaves.right")
+                                    .frame(maxWidth: 60, maxHeight: 60)
+                                    .imageScale(.large)
+                                    .foregroundColor(.white)
+                                    .background(Color(red: 169/255, green: 169/255, blue: 169/255))
+                                    .clipShape(Circle())
+                            }
+                            .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                         }
-                        .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                        .frame(maxWidth: UIScreen.main.bounds.width*0.6, maxHeight: UIScreen.main.bounds.height*0.2, alignment: .center)
+                        .background(Baloon(cornerRadius: 30.0))
                     }
-                    .frame(width: 200, height: 100, alignment: .center)
-                    .background(Baloon(cornerRadius: 30.0))
                 }
-                Duck()
+                // ボタン群
+                Group {
+                    Button(action: {
+                        self.isShowingModal.toggle()
+                    }) {
+                        Text("相談内容を振り返る")
+                                .foregroundColor(Color(red: 255/255, green: 255/255, blue: 255/255)) //white
+                                .font(Font.custom("Helvetica-Light", size: 15))
+                                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                                .frame(minWidth: 0, maxWidth: 200, alignment: .center)
+                                .background(Color(red: 255/255, green: 127/255, blue: 80/255))
+                                .cornerRadius(10)
+                                .shadow(color: Color(red: 173/255, green: 216/255, blue: 230/255), radius: 1, x: 0, y: 5) //lightblue
+                    }
+                    Button(action: {
+                        self.appState.audioObject.isFinished.toggle()
+                    }) {
+                        Text("もう一度相談する")
+                            .foregroundColor(Color(red: 255/255, green: 255/255, blue: 255/255)) //white
+                            .font(Font.custom("Helvetica-Light", size: 15))
+                            .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                            .frame(minWidth: 0, maxWidth: 200, alignment: .center)
+                            .background(Color(red: 255/255, green: 127/255, blue: 80/255))
+                            .cornerRadius(10)
+                            .shadow(color: Color(red: 173/255, green: 216/255, blue: 230/255), radius: 1, x: 0, y: 5) //lightblue
+                    }
+                }
             }
+            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+            // 相談内容振り返りモーダル
+            ConsultResultTextModal(isShowingModal: $isShowingModal)
+        }
+    }
+}
+
+struct AnswerView_Previews: PreviewProvider {
+    static var previews: some View {
+        AnswerView()
     }
 }
