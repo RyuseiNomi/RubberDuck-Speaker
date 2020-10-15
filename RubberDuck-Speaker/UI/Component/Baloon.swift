@@ -18,17 +18,18 @@ struct Baloon: View {
                     .cornerRadius(cornerRadius)
                 Rectangle().foregroundColor(Color.white)
                     .frame(
-                        width: (geometry.size.width - geometry.size.width/10) - 10,
-                        height: (geometry.size.height - geometry.size.height/10) - 10
+                        width: (geometry.size.width) - 10,
+                        height: (geometry.size.height) - 10
                     )
                     .cornerRadius(cornerRadius)
             }
             .frame(
-                width: geometry.size.width - geometry.size.width/10,
-                height: geometry.size.height - geometry.size.height/10
+                width: geometry.size.width,
+                height: geometry.size.height
             )
-            .position(x: geometry.size.width - (geometry.size.width/2),
-                      y: geometry.size.height / 2
+            .position(
+                x: geometry.size.width - (geometry.size.width/2),
+                y: geometry.size.height / 2
             )
         }
     }
