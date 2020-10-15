@@ -27,6 +27,14 @@ class AppState: ObservableObject {
         var text: String = ""
     }
     
+    struct SoundObject {
+        /// 音楽ファイルを再生するためのオブジェクト
+        var audioPlayer: AVAudioPlayer? = AVAudioPlayer()
+        /// 音の再生/停止状態を保持する変数
+        var isPlaying: Bool = false
+        
+    }
+    
     struct Questions {
         // TODO 質問内容をカスタマイズできるようにする
         var questions:[Question] = [
@@ -36,5 +44,6 @@ class AppState: ObservableObject {
     }
     
     @Published public var audioObject = AudioObject()
+    @Published public var soundObject = SoundObject()
     @Published public var questions = Questions()
 }

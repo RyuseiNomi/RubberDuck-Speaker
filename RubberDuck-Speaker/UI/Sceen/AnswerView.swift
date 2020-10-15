@@ -25,19 +25,19 @@ struct AnswerView: View {
                                 .font(Font.custom("Helvetica-Light", size: 15))
                                 .foregroundColor(Color.gray)
                             Button(action: {
-                                //TODO アヒルの鳴き声を鳴らす
-                                return
+                                SoundPlayInteractor(appState: self.appState).playSound()
                             }) {
-                                Image(systemName: "dot.radiowaves.right")
+                                Image(systemName: self.getAudioPlayStatus())
+                                    .resizable()
                                     .frame(maxWidth: 60, maxHeight: 60)
                                     .imageScale(.large)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.gray)
                                     .background(Color(red: 169/255, green: 169/255, blue: 169/255))
                                     .clipShape(Circle())
                             }
                             .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                         }
-                        .frame(maxWidth: UIScreen.main.bounds.width*0.6, maxHeight: UIScreen.main.bounds.height*0.2, alignment: .center)
+                        .frame(maxWidth: UIScreen.main.bounds.width*0.7, maxHeight: UIScreen.main.bounds.height*0.3, alignment: .center)
                         .background(Baloon(cornerRadius: 30.0))
                     }
                 }
@@ -86,6 +86,14 @@ struct AnswerView: View {
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             // 相談内容振り返りモーダル
             ConsultResultTextModal(isShowingModal: $isShowingModal)
+        }
+    }
+    
+    private func getAudioPlayStatus() ->String {
+        if self.appState.soundObject.isPlaying {
+            return "pause.circle.fill"
+        } else {
+            return "play.circle.fill"
         }
     }
 }
