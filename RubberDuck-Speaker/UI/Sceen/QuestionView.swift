@@ -16,17 +16,19 @@ struct QuestionView: View {
         VStack() {
             VStack() {
                 if !self.appState.audioObject.isRecording {
-                    Text("今困っていることを\nアヒルに話してみましょう")
+                    Text("今困っていることを")
+                        .foregroundColor(Color.gray)
+                    Text("アヒルに話してみましょう")
                         .foregroundColor(Color.gray)
                 } else {
-                    Text("聴いています…")
+                    Text("アヒルが聴いています…")
                         .foregroundColor(Color.gray)
                 }
                 Button(action: {
                     SpeechAudioInteractor(appState: self.appState).recordButtonTapped()
                 }) {
                     Image(systemName: "mic")
-                        .frame(maxWidth: 100, maxHeight: 100)
+                        .frame(maxWidth: 70, maxHeight: 70)
                         .imageScale(.large)
                         .background(self.getButtonColor())
                         .foregroundColor(.white)
@@ -35,7 +37,7 @@ struct QuestionView: View {
                 .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
             }
             .padding(EdgeInsets(top: 50, leading: 10, bottom: 20, trailing: 10))
-            .frame(maxWidth: UIScreen.main.bounds.width*0.8, maxHeight: UIScreen.main.bounds.height*0.25)
+            .frame(maxWidth: UIScreen.main.bounds.width*0.8, maxHeight: UIScreen.main.bounds.height*0.35)
             .background(Baloon(cornerRadius: 20.0))
             .onAppear(perform:{
                 SpeechAudioInteractor(appState: self.appState).requetAuthenticationToUseSpeech()
