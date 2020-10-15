@@ -113,6 +113,8 @@ class SpeechAudioInteractor {
                 //self.appState.audioObject.recognitionRequest = nil
                 self.appState.audioObject.recognitionTask = nil
                 self.appState.audioObject.isEnabled = true
+                // 相談が終了したことを示すステータスに変更
+                self.appState.audioObject.isFinished.toggle()
             }
         }
     }

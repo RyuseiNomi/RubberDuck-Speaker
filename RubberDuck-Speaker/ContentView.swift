@@ -12,7 +12,11 @@ struct ContentView: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        QuestionView()
+        if !self.appState.audioObject.isFinished {
+            QuestionView()
+        } else {
+            AnswerView()
+        }
     }
 }
 

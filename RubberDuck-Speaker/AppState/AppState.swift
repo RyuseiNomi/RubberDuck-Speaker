@@ -21,6 +21,8 @@ class AppState: ObservableObject {
         var isEnabled: Bool = false
         /// 録音中かどうかを保持する変数
         var isRecording: Bool = false
+        /// 相談が終了したかどうかを保持する変数
+        var isFinished: Bool = false
         /// Speechによって認識された文字を出力してViewに返すための変数
         var text: String = ""
     }
