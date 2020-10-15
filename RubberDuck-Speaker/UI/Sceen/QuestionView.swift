@@ -10,33 +10,14 @@ import Speech
 
 struct QuestionView: View {
     
-    private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))
-    @EnvironmentObject public var appState: AppState
-    
     var body: some View {
-        VStack() {
-            Text(self.appState.audioObject.text)
-            Button(action: {
-                SpeechAudioInteractor(appState: self.appState).recordButtonTapped()
-            }) {
-                Image(systemName: "mic")
-                    .frame(maxWidth: 60, maxHeight: 60)
-                    .imageScale(.large)
-                    .background(self.getButtonColor())
-                    .foregroundColor(.white)
-                    .clipShape(Circle())
+        GeometryReader { geometry in
+            VStack() {
+                Baloon()
+                    .frame(maxWidth: .infinity, maxHeight: geometry.size.height - geometry.size.height*0.3)
+                Duck()
+                    .frame(maxWidth: .infinity, maxHeight: geometry.size.height - geometry.size.height*0.7)
             }
-        }
-        .onAppear(perform:{
-            SpeechAudioInteractor(appState: self.appState).requetAuthenticationToUseSpeech()
-        })
-    }
-    
-    private func getButtonColor() -> Color {
-        if self.appState.audioObject.isRecording {
-            return Color(red: 220/255, green: 20/255, blue: 60/255) // crimson
-        } else {
-            return Color(red: 169/255, green: 169/255, blue: 169/255) // darkgray
         }
     }
 }

@@ -128,7 +128,7 @@ class SpeechAudioInteractor {
         self.appState.audioObject.audioEngine.prepare()
         do {
             try self.appState.audioObject.audioEngine.start()
-            self.appState.audioObject.text = "録音中"
+            self.appState.audioObject.text = "聴いています…"
         } catch {
             fatalError("An error has occured when prepare to record")
         }

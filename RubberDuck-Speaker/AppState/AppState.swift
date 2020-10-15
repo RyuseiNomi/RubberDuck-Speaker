@@ -22,7 +22,7 @@ class AppState: ObservableObject {
         /// 録音中かどうかを保持する変数
         var isRecording: Bool = false
         /// Speechによって認識された文字を出力してViewに返すための変数
-        var text: String = ""
+        var text: String = "マイクボタンを押す"
     }
     
     @Published public var audioObject = AudioObject()
