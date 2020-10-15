@@ -30,26 +30,8 @@ struct AnswerView: View {
                 .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height*0.5)
                 .background(Baloon(cornerRadius: 10.0))
                 .padding(EdgeInsets(top: 20, leading: 10, bottom: 30, trailing: 10))
-                HStack() {
-                    VStack() {
-                        Button(action: {
-                            SoundPlayInteractor(appState: self.appState).playSound()
-                        }) {
-                            Image(systemName: self.getAudioPlayStatus())
-                                .resizable()
-                                .frame(maxWidth: 60, maxHeight: 60)
-                                .imageScale(.large)
-                                .foregroundColor(.gray)
-                                .background(Color(red: 169/255, green: 169/255, blue: 169/255))
-                                .clipShape(Circle())
-                        }
-                        .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
-                    }
-                    .frame(maxWidth: UIScreen.main.bounds.width*0.4, maxHeight: UIScreen.main.bounds.height*0.15, alignment: .center)
-                    .background(Baloon(cornerRadius: 30.0))
-                    Duck()
-                    .frame(maxHeight: UIScreen.main.bounds.height*0.1, alignment: .center)
-                }
+                Duck()
+                .frame(maxHeight: UIScreen.main.bounds.height*0.1, alignment: .center)
                 // ボタン群
                 Button(action: {
                     self.appState.audioObject.isFinished.toggle()

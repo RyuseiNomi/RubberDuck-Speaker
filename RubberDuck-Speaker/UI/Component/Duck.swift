@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct Duck: View {
+    
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
-        Image("Duck")
-            .frame(maxWidth: 100, maxHeight: 100)
-            .imageScale(.large)
+        Button(action: {
+            SoundPlayInteractor(appState: self.appState).playSound()
+        }) {
+            Image("Duck")
+                .frame(maxWidth: 100, maxHeight: 100)
+                .imageScale(.large)
+        }
     }
 }
