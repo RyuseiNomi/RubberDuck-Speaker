@@ -27,13 +27,14 @@ struct ConsultResultTextModal: View {
                 Text("OK")
                     .foregroundColor(Color(red: 255/255, green: 255/255, blue: 255/255)) //white
                     .font(Font.custom("Helvetica-Light", size: 15))
-                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                    .padding(EdgeInsets(top: 10, leading: 50, bottom: 10, trailing: 50))
                     .background(Color(red: 255/255, green: 127/255, blue: 80/255))
                     .cornerRadius(10)
                     .shadow(color: Color(red: 173/255, green: 216/255, blue: 230/255), radius: 1, x: 0, y: 5) //lightblue
             }
+            .frame(width: 200, height: 100, alignment: .center)
         }
-        .frame(width: UIScreen.main.bounds.width*0.75, height: UIScreen.main.bounds.height*0.3, alignment: .center)
+        .frame(width: UIScreen.main.bounds.width*0.75, height: UIScreen.main.bounds.height*0.5, alignment: .center)
         .background(Color.white)
         .cornerRadius(30)
         .animation(.default)

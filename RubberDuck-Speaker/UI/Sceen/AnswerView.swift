@@ -46,27 +46,41 @@ struct AnswerView: View {
                     Button(action: {
                         self.isShowingModal.toggle()
                     }) {
-                        Text("相談内容を振り返る")
-                                .foregroundColor(Color(red: 255/255, green: 255/255, blue: 255/255)) //white
-                                .font(Font.custom("Helvetica-Light", size: 15))
-                                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                                .frame(minWidth: 0, maxWidth: 200, alignment: .center)
-                                .background(Color(red: 255/255, green: 127/255, blue: 80/255))
-                                .cornerRadius(10)
-                                .shadow(color: Color(red: 173/255, green: 216/255, blue: 230/255), radius: 1, x: 0, y: 5) //lightblue
+                        HStack() {
+                            Image(systemName: "message.circle")
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxWidth: 30, maxHeight: 30)
+                                .foregroundColor(.white)
+                            Text("相談内容を振り返る")
+                                    .foregroundColor(Color(red: 255/255, green: 255/255, blue: 255/255)) //white
+                                    .font(Font.custom("Helvetica-Light", size: 15))
+                                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                        }
+                        .frame(minWidth: 0, maxWidth: 250, alignment: .center)
+                        .background(Color(red: 255/255, green: 127/255, blue: 80/255))
+                        .cornerRadius(10)
+                        .shadow(color: Color(red: 173/255, green: 216/255, blue: 230/255), radius: 1, x: 0, y: 5) //lightblue
                     }
+                    .padding(EdgeInsets(top: 30, leading: 0, bottom: 10, trailing: 0))
                     Button(action: {
                         self.appState.audioObject.isFinished.toggle()
                     }) {
-                        Text("もう一度相談する")
-                            .foregroundColor(Color(red: 255/255, green: 255/255, blue: 255/255)) //white
-                            .font(Font.custom("Helvetica-Light", size: 15))
-                            .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                            .frame(minWidth: 0, maxWidth: 200, alignment: .center)
-                            .background(Color(red: 255/255, green: 127/255, blue: 80/255))
-                            .cornerRadius(10)
-                            .shadow(color: Color(red: 173/255, green: 216/255, blue: 230/255), radius: 1, x: 0, y: 5) //lightblue
+                        HStack() {
+                            Image(systemName: "arrow.counterclockwise")
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxWidth: 30, maxHeight: 30)
+                                .foregroundColor(.white)
+                            Text("もう一度相談する")
+                                .foregroundColor(Color(red: 255/255, green: 255/255, blue: 255/255)) //white
+                                .font(Font.custom("Helvetica-Light", size: 15))
+                                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                        }
+                        .frame(minWidth: 0, maxWidth: 250, alignment: .center)
+                        .background(Color(red: 255/255, green: 127/255, blue: 80/255))
+                        .cornerRadius(10)
+                        .shadow(color: Color(red: 173/255, green: 216/255, blue: 230/255), radius: 1, x: 0, y: 5) //lightblue
                     }
+                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                 }
             }
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
