@@ -22,8 +22,17 @@ class AppState: ObservableObject {
         /// 録音中かどうかを保持する変数
         var isRecording: Bool = false
         /// Speechによって認識された文字を出力してViewに返すための変数
-        var text: String = "マイクボタンを押す"
+        var text: String = ""
+    }
+    
+    struct Questions {
+        // TODO 質問内容をカスタマイズできるようにする
+        var questions:[Question] = [
+            Question(question: "今困っていることを\nアヒルに話してみてください", answer: ""),
+        ]
+        var currentQuestionIndex:Int = 0
     }
     
     @Published public var audioObject = AudioObject()
+    @Published public var questions = Questions()
 }

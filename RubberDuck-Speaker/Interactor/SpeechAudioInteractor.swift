@@ -106,6 +106,7 @@ class SpeechAudioInteractor {
             }
             
             if error != nil || isFinal {
+                print("stopped")
                 self.appState.audioObject.audioEngine.stop()
                 self.inputNode?.removeTap(onBus: 0)
                 
@@ -128,7 +129,7 @@ class SpeechAudioInteractor {
         self.appState.audioObject.audioEngine.prepare()
         do {
             try self.appState.audioObject.audioEngine.start()
-            self.appState.audioObject.text = "聴いています…"
+            self.appState.audioObject.text = ""
         } catch {
             fatalError("An error has occured when prepare to record")
         }

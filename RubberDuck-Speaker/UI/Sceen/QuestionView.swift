@@ -14,9 +14,9 @@ struct QuestionView: View {
         GeometryReader { geometry in
             VStack() {
                 Baloon()
-                    .frame(maxWidth: .infinity, maxHeight: geometry.size.height - geometry.size.height*0.3)
+                    .frame(maxWidth: .infinity, maxHeight: geometry.size.height*0.6)
                 Duck()
-                    .frame(maxWidth: .infinity, maxHeight: geometry.size.height - geometry.size.height*0.7)
+                    .frame(maxWidth: .infinity, maxHeight: geometry.size.height*0.4)
             }
         }
     }

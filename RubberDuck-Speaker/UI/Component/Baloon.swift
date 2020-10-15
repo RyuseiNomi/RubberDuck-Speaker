@@ -8,10 +8,18 @@
 import SwiftUI
 
 struct Baloon: View {
+    
     @EnvironmentObject public var appState: AppState
     
     var body: some View {
         VStack() {
+            if !self.appState.audioObject.isRecording {
+                Text("今困っていることを\nアヒルに話してみてください")
+                    .foregroundColor(Color.gray)
+            } else {
+                Text("聴いています…")
+                    .foregroundColor(Color.gray)
+            }
             Text(self.appState.audioObject.text)
                 .foregroundColor(Color.gray)
             Button(action: {
@@ -24,6 +32,7 @@ struct Baloon: View {
                     .foregroundColor(.white)
                     .clipShape(Circle())
             }
+            .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(BaloonFrame())
