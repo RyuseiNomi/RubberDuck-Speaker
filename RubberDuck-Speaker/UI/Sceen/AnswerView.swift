@@ -29,10 +29,8 @@ struct AnswerView: View {
                 }
                 .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height*0.5)
                 .background(Baloon(cornerRadius: 10.0))
-                // 吹き出し
+                .padding(EdgeInsets(top: 20, leading: 10, bottom: 30, trailing: 10))
                 HStack() {
-                    Duck()
-                    .frame(maxHeight: UIScreen.main.bounds.height*0.1, alignment: .center)
                     VStack() {
                         Button(action: {
                             SoundPlayInteractor(appState: self.appState).playSound()
@@ -47,8 +45,10 @@ struct AnswerView: View {
                         }
                         .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                     }
-                    .frame(maxWidth: UIScreen.main.bounds.width*0.7, maxHeight: UIScreen.main.bounds.height*0.3, alignment: .center)
+                    .frame(maxWidth: UIScreen.main.bounds.width*0.4, maxHeight: UIScreen.main.bounds.height*0.15, alignment: .center)
                     .background(Baloon(cornerRadius: 30.0))
+                    Duck()
+                    .frame(maxHeight: UIScreen.main.bounds.height*0.1, alignment: .center)
                 }
                 // ボタン群
                 Button(action: {
