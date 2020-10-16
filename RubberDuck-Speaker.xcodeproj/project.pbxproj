@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B14A8512535F060003399CE /* Baloon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14A8502535F060003399CE /* Baloon.swift */; };
+		1B14A8562537F8CF003399CE /* Duck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14A8552537F8CF003399CE /* Duck.swift */; };
+		1B14A85B2538085E003399CE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14A85A2538085E003399CE /* Question.swift */; };
+		1B14A87525385822003399CE /* SoundPlayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14A87425385822003399CE /* SoundPlayInteractor.swift */; };
+		1B14A87A253859DB003399CE /* duck.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B14A879253859DA003399CE /* duck.mp3 */; };
 		1B30A5972531BF860040F7EE /* RubberDuck_SpeakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5962531BF860040F7EE /* RubberDuck_SpeakerApp.swift */; };
 		1B30A5992531BF860040F7EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5982531BF860040F7EE /* ContentView.swift */; };
 		1B30A59B2531BF880040F7EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B30A59A2531BF880040F7EE /* Assets.xcassets */; };
 		1B30A59E2531BF880040F7EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B30A59D2531BF880040F7EE /* Preview Assets.xcassets */; };
 		1B30A5A92531BF890040F7EE /* RubberDuck_SpeakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5A82531BF890040F7EE /* RubberDuck_SpeakerTests.swift */; };
 		1B30A5B42531BF890040F7EE /* RubberDuck_SpeakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5B32531BF890040F7EE /* RubberDuck_SpeakerUITests.swift */; };
+		1B30A5CE2531CCEF0040F7EE /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5CD2531CCEF0040F7EE /* QuestionView.swift */; };
+		1B30A5D32531CCFB0040F7EE /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5D22531CCFB0040F7EE /* AnswerView.swift */; };
+		1B30A5D82532C09A0040F7EE /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5D72532C09A0040F7EE /* AppState.swift */; };
+		1B30A5DD2532C3C00040F7EE /* SpeechAudioInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5DC2532C3C00040F7EE /* SpeechAudioInteractor.swift */; };
+		1BB5791B25388DD800C59E0B /* PhotoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5791A25388DD800C59E0B /* PhotoInteractor.swift */; };
+		1BB57920253897F900C59E0B /* ButtonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5791F253897F900C59E0B /* ButtonLayout.swift */; };
+		1BB5792825389D4000C59E0B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5792725389D4000C59E0B /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B14A8502535F060003399CE /* Baloon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baloon.swift; sourceTree = "<group>"; };
+		1B14A8552537F8CF003399CE /* Duck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duck.swift; sourceTree = "<group>"; };
+		1B14A85A2538085E003399CE /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		1B14A87425385822003399CE /* SoundPlayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayInteractor.swift; sourceTree = "<group>"; };
+		1B14A879253859DA003399CE /* duck.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = duck.mp3; path = ../../../../Downloads/duck.mp3; sourceTree = "<group>"; };
 		1B30A5932531BF860040F7EE /* RubberDuck-Speaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RubberDuck-Speaker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B30A5962531BF860040F7EE /* RubberDuck_SpeakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubberDuck_SpeakerApp.swift; sourceTree = "<group>"; };
 		1B30A5982531BF860040F7EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +62,13 @@
 		1B30A5AF2531BF890040F7EE /* RubberDuck-SpeakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RubberDuck-SpeakerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B30A5B32531BF890040F7EE /* RubberDuck_SpeakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubberDuck_SpeakerUITests.swift; sourceTree = "<group>"; };
 		1B30A5B52531BF890040F7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B30A5CD2531CCEF0040F7EE /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		1B30A5D22531CCFB0040F7EE /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
+		1B30A5D72532C09A0040F7EE /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		1B30A5DC2532C3C00040F7EE /* SpeechAudioInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechAudioInteractor.swift; sourceTree = "<group>"; };
+		1BB5791A25388DD800C59E0B /* PhotoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInteractor.swift; sourceTree = "<group>"; };
+		1BB5791F253897F900C59E0B /* ButtonLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLayout.swift; sourceTree = "<group>"; };
+		1BB5792725389D4000C59E0B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +119,11 @@
 		1B30A5952531BF860040F7EE /* RubberDuck-Speaker */ = {
 			isa = PBXGroup;
 			children = (
+				1B14A879253859DA003399CE /* duck.mp3 */,
+				1B30A5C92531CB2C0040F7EE /* Interactor */,
+				1B30A5C82531CB250040F7EE /* Repository */,
+				1B30A5C52531CB170040F7EE /* UI */,
+				1B30A5C42531CB0B0040F7EE /* AppState */,
 				1B30A5962531BF860040F7EE /* RubberDuck_SpeakerApp.swift */,
 				1B30A5982531BF860040F7EE /* ContentView.swift */,
 				1B30A59A2531BF880040F7EE /* Assets.xcassets */,
@@ -128,6 +157,62 @@
 				1B30A5B52531BF890040F7EE /* Info.plist */,
 			);
 			path = "RubberDuck-SpeakerUITests";
+			sourceTree = "<group>";
+		};
+		1B30A5C42531CB0B0040F7EE /* AppState */ = {
+			isa = PBXGroup;
+			children = (
+				1B30A5D72532C09A0040F7EE /* AppState.swift */,
+			);
+			path = AppState;
+			sourceTree = "<group>";
+		};
+		1B30A5C52531CB170040F7EE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1B30A5C62531CB170040F7EE /* Component */,
+				1B30A5C72531CB170040F7EE /* Sceen */,
+			);
+			name = UI;
+			path = "RubberDuck-Speaker/UI";
+			sourceTree = SOURCE_ROOT;
+		};
+		1B30A5C62531CB170040F7EE /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				1B14A8502535F060003399CE /* Baloon.swift */,
+				1B14A8552537F8CF003399CE /* Duck.swift */,
+				1BB5791F253897F900C59E0B /* ButtonLayout.swift */,
+				1BB5792725389D4000C59E0B /* ImagePicker.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		1B30A5C72531CB170040F7EE /* Sceen */ = {
+			isa = PBXGroup;
+			children = (
+				1B30A5CD2531CCEF0040F7EE /* QuestionView.swift */,
+				1B30A5D22531CCFB0040F7EE /* AnswerView.swift */,
+			);
+			path = Sceen;
+			sourceTree = "<group>";
+		};
+		1B30A5C82531CB250040F7EE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				1B14A85A2538085E003399CE /* Question.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		1B30A5C92531CB2C0040F7EE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1B30A5DC2532C3C00040F7EE /* SpeechAudioInteractor.swift */,
+				1B14A87425385822003399CE /* SoundPlayInteractor.swift */,
+				1BB5791A25388DD800C59E0B /* PhotoInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +320,7 @@
 			files = (
 				1B30A59E2531BF880040F7EE /* Preview Assets.xcassets in Resources */,
 				1B30A59B2531BF880040F7EE /* Assets.xcassets in Resources */,
+				1B14A87A253859DB003399CE /* duck.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +345,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BB5792825389D4000C59E0B /* ImagePicker.swift in Sources */,
 				1B30A5992531BF860040F7EE /* ContentView.swift in Sources */,
+				1B30A5D82532C09A0040F7EE /* AppState.swift in Sources */,
+				1B30A5CE2531CCEF0040F7EE /* QuestionView.swift in Sources */,
+				1B14A85B2538085E003399CE /* Question.swift in Sources */,
+				1B30A5D32531CCFB0040F7EE /* AnswerView.swift in Sources */,
+				1B14A8562537F8CF003399CE /* Duck.swift in Sources */,
+				1BB5791B25388DD800C59E0B /* PhotoInteractor.swift in Sources */,
+				1BB57920253897F900C59E0B /* ButtonLayout.swift in Sources */,
+				1B14A8512535F060003399CE /* Baloon.swift in Sources */,
+				1B30A5DD2532C3C00040F7EE /* SpeechAudioInteractor.swift in Sources */,
 				1B30A5972531BF860040F7EE /* RubberDuck_SpeakerApp.swift in Sources */,
+				1B14A87525385822003399CE /* SoundPlayInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -402,7 +499,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

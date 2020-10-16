@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        if !self.appState.audioObject.isFinished {
+            QuestionView()
+                .edgesIgnoringSafeArea(.all)
+                .background(Color(red: 144/255, green: 238/255, blue: 144/255))
+        } else {
+            AnswerView()
+                .edgesIgnoringSafeArea(.all)
+                .background(Color(red: 144/255, green: 238/255, blue: 144/255))
+        }
     }
 }
 
