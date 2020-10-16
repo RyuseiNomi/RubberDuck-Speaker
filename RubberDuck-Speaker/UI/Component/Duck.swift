@@ -21,7 +21,8 @@ struct Duck: View {
                     .imageScale(.large)
             } else {
                 Image(uiImage: self.appState.pictureObject.pickedImage)
-                    .frame(maxWidth: 100, maxHeight: 100)
+                    .resizable()
+                    .frame(maxWidth: 200, maxHeight: 200)
                     .imageScale(.large)
                     .aspectRatio(contentMode: .fit)
             }
