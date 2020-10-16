@@ -15,9 +15,16 @@ struct Duck: View {
         Button(action: {
             SoundPlayInteractor(appState: self.appState).playSound()
         }) {
-            Image("Duck")
-                .frame(maxWidth: 100, maxHeight: 100)
-                .imageScale(.large)
+            if self.appState.pictureObject.isOriginalDuck {
+                Image("Duck")
+                    .frame(maxWidth: 100, maxHeight: 100)
+                    .imageScale(.large)
+            } else {
+                Image(uiImage: self.appState.pictureObject.pickedImage)
+                    .frame(maxWidth: 100, maxHeight: 100)
+                    .imageScale(.large)
+                    .aspectRatio(contentMode: .fit)
+            }
         }
     }
 }

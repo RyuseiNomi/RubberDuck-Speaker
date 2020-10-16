@@ -35,6 +35,15 @@ class AppState: ObservableObject {
         
     }
     
+    struct PictureObject {
+        /// デバイスからの写真に関する処理を管理するオブジェクト
+        var imagePickerController: UIImagePickerController? = UIImagePickerController()
+        /// 選択した写真の情報を保持するオブジェクト
+        var pickedImage: UIImage = UIImage()
+        /// アヒルの画像がユーザから選択されているかどうかの状態を保持する変数
+        var isOriginalDuck: Bool = true
+    }
+    
     struct Questions {
         // TODO 質問内容をカスタマイズできるようにする
         var questions:[Question] = [
@@ -45,5 +54,6 @@ class AppState: ObservableObject {
     
     @Published public var audioObject = AudioObject()
     @Published public var soundObject = SoundObject()
+    @Published public var pictureObject = PictureObject()
     @Published public var questions = Questions()
 }

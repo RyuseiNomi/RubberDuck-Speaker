@@ -22,6 +22,9 @@
 		1B30A5D32531CCFB0040F7EE /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5D22531CCFB0040F7EE /* AnswerView.swift */; };
 		1B30A5D82532C09A0040F7EE /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5D72532C09A0040F7EE /* AppState.swift */; };
 		1B30A5DD2532C3C00040F7EE /* SpeechAudioInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5DC2532C3C00040F7EE /* SpeechAudioInteractor.swift */; };
+		1BB5791B25388DD800C59E0B /* PhotoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5791A25388DD800C59E0B /* PhotoInteractor.swift */; };
+		1BB57920253897F900C59E0B /* ButtonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5791F253897F900C59E0B /* ButtonLayout.swift */; };
+		1BB5792825389D4000C59E0B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5792725389D4000C59E0B /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		1B30A5D22531CCFB0040F7EE /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
 		1B30A5D72532C09A0040F7EE /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		1B30A5DC2532C3C00040F7EE /* SpeechAudioInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechAudioInteractor.swift; sourceTree = "<group>"; };
+		1BB5791A25388DD800C59E0B /* PhotoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInteractor.swift; sourceTree = "<group>"; };
+		1BB5791F253897F900C59E0B /* ButtonLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLayout.swift; sourceTree = "<group>"; };
+		1BB5792725389D4000C59E0B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +182,8 @@
 			children = (
 				1B14A8502535F060003399CE /* Baloon.swift */,
 				1B14A8552537F8CF003399CE /* Duck.swift */,
+				1BB5791F253897F900C59E0B /* ButtonLayout.swift */,
+				1BB5792725389D4000C59E0B /* ImagePicker.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -202,6 +210,7 @@
 			children = (
 				1B30A5DC2532C3C00040F7EE /* SpeechAudioInteractor.swift */,
 				1B14A87425385822003399CE /* SoundPlayInteractor.swift */,
+				1BB5791A25388DD800C59E0B /* PhotoInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -336,12 +345,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BB5792825389D4000C59E0B /* ImagePicker.swift in Sources */,
 				1B30A5992531BF860040F7EE /* ContentView.swift in Sources */,
 				1B30A5D82532C09A0040F7EE /* AppState.swift in Sources */,
 				1B30A5CE2531CCEF0040F7EE /* QuestionView.swift in Sources */,
 				1B14A85B2538085E003399CE /* Question.swift in Sources */,
 				1B30A5D32531CCFB0040F7EE /* AnswerView.swift in Sources */,
 				1B14A8562537F8CF003399CE /* Duck.swift in Sources */,
+				1BB5791B25388DD800C59E0B /* PhotoInteractor.swift in Sources */,
+				1BB57920253897F900C59E0B /* ButtonLayout.swift in Sources */,
 				1B14A8512535F060003399CE /* Baloon.swift in Sources */,
 				1B30A5DD2532C3C00040F7EE /* SpeechAudioInteractor.swift in Sources */,
 				1B30A5972531BF860040F7EE /* RubberDuck_SpeakerApp.swift in Sources */,

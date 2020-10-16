@@ -11,6 +11,7 @@ import Speech
 struct QuestionView: View {
     
     @EnvironmentObject public var appState: AppState
+    @State private(set) var isShowingImagePicker: Bool = false
     
     var body: some View {
         VStack() {
@@ -44,6 +45,14 @@ struct QuestionView: View {
             })
             Duck()
                 .frame(maxHeight: UIScreen.main.bounds.height*0.4)
+            Button(action: {
+                self.isShowingImagePicker.toggle()
+            }) {
+                ButtonLayout(width: 250, pictureName: "photo", buttonText: "自分のアヒルを選択する")
+            }
+            .sheet(isPresented: $isShowingImagePicker/*, onDismiss: loadImage*/) {
+                ImagePicker(isShowingModal: $isShowingImagePicker)
+            }
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
     }
@@ -55,6 +64,11 @@ struct QuestionView: View {
             return Color(red: 169/255, green: 169/255, blue: 169/255) // darkgray
         }
     }
+    
+    //private func loadImage() {
+    //    guard let pickedImage = self.appState.pictureObject.pickedImage else { return }
+    //
+    //}
 }
 
 struct QuestionView_Previews: PreviewProvider {
