@@ -15,6 +15,8 @@ struct QuestionView: View {
     
     var body: some View {
         VStack() {
+            
+            /* 見出しセクション */
             VStack() {
                 if !self.appState.audioObject.isRecording {
                     Text("今困っていることを")
@@ -25,26 +27,51 @@ struct QuestionView: View {
                     Text("アヒルが聴いています…")
                         .foregroundColor(Color.gray)
                 }
-                Button(action: {
-                    SpeechAudioInteractor(appState: self.appState).recordButtonTapped()
-                }) {
-                    Image(systemName: "mic")
-                        .frame(maxWidth: 70, maxHeight: 70)
-                        .imageScale(.large)
-                        .background(self.getButtonColor())
-                        .foregroundColor(.white)
-                        .clipShape(Circle())
-                }
-                .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
             }
             .padding(EdgeInsets(top: 50, leading: 10, bottom: 20, trailing: 10))
-            .frame(maxWidth: UIScreen.main.bounds.width*0.8, maxHeight: UIScreen.main.bounds.height*0.35)
-            .background(Baloon(cornerRadius: 20.0))
+            .frame(maxHeight: UIScreen.main.bounds.height*0.2)
+            //.background(Baloon(cornerRadius: 20.0))
             .onAppear(perform:{
                 SpeechAudioInteractor(appState: self.appState).requetAuthenticationToUseSpeech()
             })
-            Duck()
-                .frame(maxHeight: UIScreen.main.bounds.height*0.4)
+            
+            HStack() {
+                /* 人アイコンセクション */
+                Image(systemName: "person.circle")
+                    .resizable()
+                    .frame(width: 70, height: 70)
+                    .imageScale(.large)
+                    .background(Color.gray)
+                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                
+                /* 矢印セクション */
+                Image(systemName: "chevron.right.2")
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                    .imageScale(.large)
+                    .background(Color.white)
+                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                
+                /* アヒル選択セクション */
+                Duck()
+                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+            }
+            .frame(maxHeight: UIScreen.main.bounds.height*0.3)
+            
+            /* 録音ボタンセクション */
+            Button(action: {
+                SpeechAudioInteractor(appState: self.appState).recordButtonTapped()
+            }) {
+                Image(systemName: "mic")
+                    .frame(maxWidth: 70, maxHeight: 70)
+                    .imageScale(.large)
+                    .background(self.getButtonColor())
+                    .foregroundColor(.white)
+                    .clipShape(Circle())
+            }
+            .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+            .frame(maxHeight: UIScreen.main.bounds.height*0.2)
+            
             Button(action: {
                 self.isShowingImagePicker.toggle()
             }) {

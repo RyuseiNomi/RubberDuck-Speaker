@@ -17,7 +17,7 @@ struct Duck: View {
         }) {
             if self.appState.pictureObject.isOriginalDuck {
                 Image("Duck")
-                    .frame(maxWidth: 100, maxHeight: 100)
+                    .frame(width: 100, height: 100)
                     .imageScale(.large)
             } else {
                 Image(uiImage: self.appState.pictureObject.pickedImage)
