@@ -14,7 +14,7 @@ struct Duck: View {
     var body: some View {
         if self.appState.pictureObject.isOriginalDuck {
             Image("Duck")
-                .frame(width: 200, height: 200)
+                .frame(maxWidth: 200, maxHeight: 200)
                 .imageScale(.large)
                 .aspectRatio(contentMode: .fit)
                 .background(Color(red: 135/255, green: 206/255, blue: 250/255)) //lightskyblue

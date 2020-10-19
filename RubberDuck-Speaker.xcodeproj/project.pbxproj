@@ -25,6 +25,8 @@
 		1BB57920253897F900C59E0B /* ButtonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5791F253897F900C59E0B /* ButtonLayout.swift */; };
 		1BB5792825389D4000C59E0B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5792725389D4000C59E0B /* ImagePicker.swift */; };
 		1BF7C314253D6CF2003FED95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF7C313253D6CF2003FED95 /* LaunchScreen.storyboard */; };
+		1BF7C33C253D85E3003FED95 /* CredentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF7C33B253D85E3003FED95 /* CredentialView.swift */; };
+		1BF7C341253D967B003FED95 /* ConsultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF7C340253D967B003FED95 /* ConsultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		1BB5791F253897F900C59E0B /* ButtonLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLayout.swift; sourceTree = "<group>"; };
 		1BB5792725389D4000C59E0B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		1BF7C313253D6CF2003FED95 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1BF7C33B253D85E3003FED95 /* CredentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialView.swift; sourceTree = "<group>"; };
+		1BF7C340253D967B003FED95 /* ConsultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,8 @@
 			children = (
 				1B30A5CD2531CCEF0040F7EE /* QuestionView.swift */,
 				1B30A5D22531CCFB0040F7EE /* AnswerView.swift */,
+				1BF7C33B253D85E3003FED95 /* CredentialView.swift */,
+				1BF7C340253D967B003FED95 /* ConsultView.swift */,
 			);
 			path = Sceen;
 			sourceTree = "<group>";
@@ -346,6 +352,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BB5792825389D4000C59E0B /* ImagePicker.swift in Sources */,
+				1BF7C33C253D85E3003FED95 /* CredentialView.swift in Sources */,
+				1BF7C341253D967B003FED95 /* ConsultView.swift in Sources */,
 				1B30A5992531BF860040F7EE /* ContentView.swift in Sources */,
 				1B30A5D82532C09A0040F7EE /* AppState.swift in Sources */,
 				1B30A5CE2531CCEF0040F7EE /* QuestionView.swift in Sources */,
