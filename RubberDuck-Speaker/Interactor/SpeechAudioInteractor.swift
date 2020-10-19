@@ -106,7 +106,6 @@ class SpeechAudioInteractor {
             }
             
             if error != nil || isFinal {
-                print("stopped")
                 self.appState.audioObject.audioEngine.stop()
                 self.inputNode?.removeTap(onBus: 0)
                 

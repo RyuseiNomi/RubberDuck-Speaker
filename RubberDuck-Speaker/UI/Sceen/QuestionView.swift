@@ -24,6 +24,10 @@ struct QuestionView: View {
                     Text("アヒルに話してみましょう")
                         .foregroundColor(Color.gray)
                         .font(Font.custom("Helvetica-Light", size: 20))
+                } else {
+                    Text("聴いています…")
+                        .foregroundColor(Color.gray)
+                        .font(Font.custom("Helvetica-Light", size: 20))
                 }
             }
             .padding(EdgeInsets(top: 50, leading: 10, bottom: 20, trailing: 10))
