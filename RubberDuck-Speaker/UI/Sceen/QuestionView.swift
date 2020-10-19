@@ -48,7 +48,7 @@ struct QuestionView: View {
                         alignment: .bottomTrailing
                     )
             }
-            .sheet(isPresented: $isShowingImagePicker/*, onDismiss: loadImage*/) {
+            .sheet(isPresented: $isShowingImagePicker) {
                 ImagePicker(isShowingModal: $isShowingImagePicker)
             }
             

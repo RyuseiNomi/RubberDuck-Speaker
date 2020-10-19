@@ -16,22 +16,22 @@ class SoundPlayInteractor {
         self.appState = appState
     }
     
-    public func playSound() {
-        guard let filepath = Bundle.main.path(forResource: "duck", ofType: "mp3") else {
-            fatalError("Can not find a sound file")
-        }
-        
-        if self.appState.soundObject.isPlaying {
-            self.appState.soundObject.audioPlayer!.stop()
-            self.appState.soundObject.isPlaying.toggle()
-        } else {
-            do {
-                self.appState.soundObject.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: filepath))
-                self.appState.soundObject.audioPlayer!.play()
-                self.appState.soundObject.isPlaying.toggle()
-            } catch {
-                fatalError("Error in occured while playing a sound file")
-            }
-        }
-    }
+//    public func playSound() {
+//        guard let filepath = Bundle.main.path(forResource: "duck", ofType: "mp3") else {
+//            fatalError("Can not find a sound file")
+//        }
+//
+//        if self.appState.soundObject.isPlaying {
+//            self.appState.soundObject.audioPlayer!.stop()
+//            self.appState.soundObject.isPlaying.toggle()
+//        } else {
+//            do {
+//                self.appState.soundObject.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: filepath))
+//                self.appState.soundObject.audioPlayer!.play()
+//                self.appState.soundObject.isPlaying.toggle()
+//            } catch {
+//                fatalError("Error in occured while playing a sound file")
+//            }
+//        }
+//    }
 }

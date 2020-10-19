@@ -11,7 +11,6 @@
 		1B14A8562537F8CF003399CE /* Duck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14A8552537F8CF003399CE /* Duck.swift */; };
 		1B14A85B2538085E003399CE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14A85A2538085E003399CE /* Question.swift */; };
 		1B14A87525385822003399CE /* SoundPlayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14A87425385822003399CE /* SoundPlayInteractor.swift */; };
-		1B14A87A253859DB003399CE /* duck.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B14A879253859DA003399CE /* duck.mp3 */; };
 		1B30A5972531BF860040F7EE /* RubberDuck_SpeakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5962531BF860040F7EE /* RubberDuck_SpeakerApp.swift */; };
 		1B30A5992531BF860040F7EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5982531BF860040F7EE /* ContentView.swift */; };
 		1B30A59B2531BF880040F7EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B30A59A2531BF880040F7EE /* Assets.xcassets */; };
@@ -49,7 +48,6 @@
 		1B14A8552537F8CF003399CE /* Duck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duck.swift; sourceTree = "<group>"; };
 		1B14A85A2538085E003399CE /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		1B14A87425385822003399CE /* SoundPlayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayInteractor.swift; sourceTree = "<group>"; };
-		1B14A879253859DA003399CE /* duck.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = duck.mp3; path = ../../../../Downloads/duck.mp3; sourceTree = "<group>"; };
 		1B30A5932531BF860040F7EE /* RubberDuck-Speaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RubberDuck-Speaker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B30A5962531BF860040F7EE /* RubberDuck_SpeakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubberDuck_SpeakerApp.swift; sourceTree = "<group>"; };
 		1B30A5982531BF860040F7EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 		1B30A5952531BF860040F7EE /* RubberDuck-Speaker */ = {
 			isa = PBXGroup;
 			children = (
-				1B14A879253859DA003399CE /* duck.mp3 */,
 				1B30A5C92531CB2C0040F7EE /* Interactor */,
 				1B30A5C82531CB250040F7EE /* Repository */,
 				1B30A5C52531CB170040F7EE /* UI */,
@@ -320,7 +317,6 @@
 			files = (
 				1B30A59E2531BF880040F7EE /* Preview Assets.xcassets in Resources */,
 				1B30A59B2531BF880040F7EE /* Assets.xcassets in Resources */,
-				1B14A87A253859DB003399CE /* duck.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
