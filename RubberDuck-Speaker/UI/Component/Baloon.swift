@@ -14,12 +14,14 @@ struct Baloon: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack() {
-                Rectangle().foregroundColor(Color(red: 210/255, green: 105/255, blue: 30/255))
+                Rectangle().foregroundColor(Color(red: 128/255, green: 128/255, blue: 128/255)) // gray
+                    .cornerRadius(10.0)
                 Rectangle().foregroundColor(Color.white)
                     .frame(
                         width: (geometry.size.width) - 20,
                         height: (geometry.size.height) - 20
                     )
+                    .cornerRadius(10.0)
             }
             .frame(
                 width: geometry.size.width,

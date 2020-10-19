@@ -12,20 +12,16 @@ struct Duck: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        Button(action: {
-            SoundPlayInteractor(appState: self.appState).playSound()
-        }) {
-            if self.appState.pictureObject.isOriginalDuck {
-                Image("Duck")
-                    .frame(width: 100, height: 100)
-                    .imageScale(.large)
-            } else {
-                Image(uiImage: self.appState.pictureObject.pickedImage)
-                    .resizable()
-                    .frame(maxWidth: 200, maxHeight: 200)
-                    .imageScale(.large)
-                    .aspectRatio(contentMode: .fit)
-            }
+        if self.appState.pictureObject.isOriginalDuck {
+            Image("Duck")
+                .frame(width: 100, height: 100)
+                .imageScale(.large)
+        } else {
+            Image(uiImage: self.appState.pictureObject.pickedImage)
+                .resizable()
+                .frame(maxWidth: 200, maxHeight: 200)
+                .imageScale(.large)
+                .aspectRatio(contentMode: .fit)
         }
     }
 }

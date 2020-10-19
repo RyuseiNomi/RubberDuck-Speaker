@@ -21,65 +21,43 @@ struct QuestionView: View {
                 if !self.appState.audioObject.isRecording {
                     Text("今困っていることを")
                         .foregroundColor(Color.gray)
+                        .font(Font.custom("Helvetica-Light", size: 20))
                     Text("アヒルに話してみましょう")
                         .foregroundColor(Color.gray)
-                } else {
-                    Text("アヒルが聴いています…")
-                        .foregroundColor(Color.gray)
+                        .font(Font.custom("Helvetica-Light", size: 20))
                 }
             }
             .padding(EdgeInsets(top: 50, leading: 10, bottom: 20, trailing: 10))
             .frame(maxHeight: UIScreen.main.bounds.height*0.2)
-            //.background(Baloon(cornerRadius: 20.0))
             .onAppear(perform:{
                 SpeechAudioInteractor(appState: self.appState).requetAuthenticationToUseSpeech()
             })
             
-            HStack() {
-                /* 人アイコンセクション */
-                Image(systemName: "person.circle")
-                    .resizable()
-                    .frame(width: 70, height: 70)
-                    .imageScale(.large)
-                    .background(Color.gray)
-                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                
-                /* 矢印セクション */
-                Image(systemName: "chevron.right.2")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .imageScale(.large)
-                    .background(Color.white)
-                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                
-                /* アヒル選択セクション */
+            /* アヒル選択セクション */
+            Button(action: {
+                self.isShowingImagePicker.toggle()
+            }) {
                 Duck()
                     .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                    .frame(maxHeight: UIScreen.main.bounds.height*0.3)
             }
-            .frame(maxHeight: UIScreen.main.bounds.height*0.3)
+            .sheet(isPresented: $isShowingImagePicker/*, onDismiss: loadImage*/) {
+                ImagePicker(isShowingModal: $isShowingImagePicker)
+            }
             
             /* 録音ボタンセクション */
             Button(action: {
                 SpeechAudioInteractor(appState: self.appState).recordButtonTapped()
             }) {
                 Image(systemName: "mic")
-                    .frame(maxWidth: 70, maxHeight: 70)
+                    .frame(maxWidth: 100, maxHeight: 100)
                     .imageScale(.large)
                     .background(self.getButtonColor())
                     .foregroundColor(.white)
                     .clipShape(Circle())
             }
             .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-            .frame(maxHeight: UIScreen.main.bounds.height*0.2)
-            
-            Button(action: {
-                self.isShowingImagePicker.toggle()
-            }) {
-                ButtonLayout(width: 250, pictureName: "photo", buttonText: "自分のアヒルを選択する")
-            }
-            .sheet(isPresented: $isShowingImagePicker/*, onDismiss: loadImage*/) {
-                ImagePicker(isShowingModal: $isShowingImagePicker)
-            }
+            .frame(maxHeight: UIScreen.main.bounds.height*0.4)
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
     }
@@ -91,11 +69,6 @@ struct QuestionView: View {
             return Color(red: 169/255, green: 169/255, blue: 169/255) // darkgray
         }
     }
-    
-    //private func loadImage() {
-    //    guard let pickedImage = self.appState.pictureObject.pickedImage else { return }
-    //
-    //}
 }
 
 struct QuestionView_Previews: PreviewProvider {

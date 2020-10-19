@@ -15,11 +15,11 @@ struct ContentView: View {
         if !self.appState.audioObject.isFinished {
             QuestionView()
                 .edgesIgnoringSafeArea(.all)
-                .background(Color(red: 144/255, green: 238/255, blue: 144/255))
+                .background(Color(red: 224/255, green: 255/255, blue: 255/255)) //lightcyan
         } else {
             AnswerView()
                 .edgesIgnoringSafeArea(.all)
-                .background(Color(red: 144/255, green: 238/255, blue: 144/255))
+                .background(Color(red: 224/255, green: 255/255, blue: 255/255)) //lightcyan
         }
     }
 }
