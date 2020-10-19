@@ -15,7 +15,6 @@ struct QuestionView: View {
     
     var body: some View {
         VStack() {
-            
             /* 見出しセクション */
             VStack() {
                 if !self.appState.audioObject.isRecording {
@@ -40,6 +39,14 @@ struct QuestionView: View {
                 Duck()
                     .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                     .frame(maxHeight: UIScreen.main.bounds.height*0.3)
+                    .overlay(
+                        Image(systemName: "photo.fill")
+                            .frame(maxWidth: 50, maxHeight: 50)
+                            .foregroundColor(.white)
+                            .background(Color(red: 143/255, green: 188/255, blue: 143/255)) // darkseagreen
+                            .clipShape(Circle()),
+                        alignment: .bottomTrailing
+                    )
             }
             .sheet(isPresented: $isShowingImagePicker/*, onDismiss: loadImage*/) {
                 ImagePicker(isShowingModal: $isShowingImagePicker)
@@ -55,6 +62,11 @@ struct QuestionView: View {
                     .background(self.getButtonColor())
                     .foregroundColor(.white)
                     .clipShape(Circle())
+                    .overlay(
+                        Circle()
+                            .stroke(Color.white, lineWidth: 4)
+                            .shadow(radius: 3)
+                    )
             }
             .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
             .frame(maxHeight: UIScreen.main.bounds.height*0.4)

@@ -29,16 +29,17 @@ struct AnswerView: View {
                 }
                 .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height*0.5)
                 .background(Baloon(cornerRadius: 10.0))
-                .padding(EdgeInsets(top: 20, leading: 10, bottom: 30, trailing: 10))
+                .padding(EdgeInsets(top: 10, leading: 10, bottom: 50, trailing: 10))
                 Duck()
-                .frame(maxHeight: UIScreen.main.bounds.height*0.1, alignment: .center)
-                // ボタン群
+                    .frame(maxHeight: UIScreen.main.bounds.height*0.1, alignment: .center)
+                    .padding(EdgeInsets(top: 30, leading: 10, bottom: 30, trailing: 10))
+                
                 Button(action: {
                     self.appState.audioObject.isFinished.toggle()
                 }) {
                     ButtonLayout(width: 250, pictureName: "arrow.counterclockwise", buttonText: "もう一度相談する")
                 }
-                .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                .padding(EdgeInsets(top: 50, leading: 0, bottom: 10, trailing: 0))
             }
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         }
