@@ -24,6 +24,7 @@
 		1BB5791B25388DD800C59E0B /* PhotoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5791A25388DD800C59E0B /* PhotoInteractor.swift */; };
 		1BB57920253897F900C59E0B /* ButtonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5791F253897F900C59E0B /* ButtonLayout.swift */; };
 		1BB5792825389D4000C59E0B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5792725389D4000C59E0B /* ImagePicker.swift */; };
+		1BF7C314253D6CF2003FED95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF7C313253D6CF2003FED95 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		1BB5791A25388DD800C59E0B /* PhotoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInteractor.swift; sourceTree = "<group>"; };
 		1BB5791F253897F900C59E0B /* ButtonLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLayout.swift; sourceTree = "<group>"; };
 		1BB5792725389D4000C59E0B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1BF7C313253D6CF2003FED95 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				1B30A59A2531BF880040F7EE /* Assets.xcassets */,
 				1B30A59F2531BF880040F7EE /* Info.plist */,
 				1B30A59C2531BF880040F7EE /* Preview Content */,
+				1BF7C313253D6CF2003FED95 /* LaunchScreen.storyboard */,
 			);
 			path = "RubberDuck-Speaker";
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BF7C314253D6CF2003FED95 /* LaunchScreen.storyboard in Resources */,
 				1B30A59E2531BF880040F7EE /* Preview Assets.xcassets in Resources */,
 				1B30A59B2531BF880040F7EE /* Assets.xcassets in Resources */,
 			);

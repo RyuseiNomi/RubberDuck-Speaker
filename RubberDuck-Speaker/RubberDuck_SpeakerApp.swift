@@ -9,10 +9,21 @@ import SwiftUI
 
 @main
 struct RubberDuck_SpeakerApp: App {
+    
+    @UIApplicationDelegateAdaptor var delegate: AppDelegate
     let appState = AppState()
+    
     var body: some Scene {
         WindowGroup {
             ContentView().environmentObject(appState)
         }
+    }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        sleep(2)
+        return true
     }
 }
