@@ -15,44 +15,65 @@ struct QuestionView: View {
     
     var body: some View {
         VStack() {
+            /* 見出しセクション */
             VStack() {
                 if !self.appState.audioObject.isRecording {
                     Text("今困っていることを")
                         .foregroundColor(Color.gray)
+                        .font(Font.custom("Helvetica-Light", size: 20))
                     Text("アヒルに話してみましょう")
                         .foregroundColor(Color.gray)
+                        .font(Font.custom("Helvetica-Light", size: 20))
                 } else {
-                    Text("アヒルが聴いています…")
+                    Text("聴いています…")
                         .foregroundColor(Color.gray)
+                        .font(Font.custom("Helvetica-Light", size: 20))
                 }
-                Button(action: {
-                    SpeechAudioInteractor(appState: self.appState).recordButtonTapped()
-                }) {
-                    Image(systemName: "mic")
-                        .frame(maxWidth: 70, maxHeight: 70)
-                        .imageScale(.large)
-                        .background(self.getButtonColor())
-                        .foregroundColor(.white)
-                        .clipShape(Circle())
-                }
-                .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
             }
             .padding(EdgeInsets(top: 50, leading: 10, bottom: 20, trailing: 10))
-            .frame(maxWidth: UIScreen.main.bounds.width*0.8, maxHeight: UIScreen.main.bounds.height*0.35)
-            .background(Baloon(cornerRadius: 20.0))
+            .frame(maxHeight: UIScreen.main.bounds.height*0.2)
             .onAppear(perform:{
                 SpeechAudioInteractor(appState: self.appState).requetAuthenticationToUseSpeech()
             })
-            Duck()
-                .frame(maxHeight: UIScreen.main.bounds.height*0.4)
+            
+            /* アヒル選択セクション */
             Button(action: {
                 self.isShowingImagePicker.toggle()
             }) {
-                ButtonLayout(width: 250, pictureName: "photo", buttonText: "自分のアヒルを選択する")
+                Duck()
+                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                    .frame(maxHeight: UIScreen.main.bounds.height*0.3)
+                    .overlay(
+                        Image(systemName: "photo.fill")
+                            .frame(maxWidth: 50, maxHeight: 50)
+                            .foregroundColor(.white)
+                            .background(Color(red: 143/255, green: 188/255, blue: 143/255)) // darkseagreen
+                            .clipShape(Circle()),
+                        alignment: .bottomTrailing
+                    )
             }
-            .sheet(isPresented: $isShowingImagePicker/*, onDismiss: loadImage*/) {
+            .sheet(isPresented: $isShowingImagePicker) {
                 ImagePicker(isShowingModal: $isShowingImagePicker)
             }
+            
+            /* 録音ボタンセクション */
+            Button(action: {
+                SpeechAudioInteractor(appState: self.appState).recordButtonTapped()
+            }) {
+                Image(systemName: "mic")
+                    .frame(maxWidth: 100, maxHeight: 100)
+                    .imageScale(.large)
+                    .background(self.getButtonColor())
+                    .foregroundColor(.white)
+                    .clipShape(Circle())
+                    .overlay(
+                        Circle()
+                            .stroke(Color.white, lineWidth: 4)
+                            .shadow(radius: 3)
+                    )
+            }
+            .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+            .frame(maxHeight: UIScreen.main.bounds.height*0.4)
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
     }
@@ -64,11 +85,6 @@ struct QuestionView: View {
             return Color(red: 169/255, green: 169/255, blue: 169/255) // darkgray
         }
     }
-    
-    //private func loadImage() {
-    //    guard let pickedImage = self.appState.pictureObject.pickedImage else { return }
-    //
-    //}
 }
 
 struct QuestionView_Previews: PreviewProvider {

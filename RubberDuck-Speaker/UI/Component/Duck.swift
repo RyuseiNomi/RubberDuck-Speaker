@@ -12,20 +12,25 @@ struct Duck: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        Button(action: {
-            SoundPlayInteractor(appState: self.appState).playSound()
-        }) {
-            if self.appState.pictureObject.isOriginalDuck {
-                Image("Duck")
-                    .frame(maxWidth: 100, maxHeight: 100)
-                    .imageScale(.large)
-            } else {
-                Image(uiImage: self.appState.pictureObject.pickedImage)
-                    .resizable()
-                    .frame(maxWidth: 200, maxHeight: 200)
-                    .imageScale(.large)
-                    .aspectRatio(contentMode: .fit)
-            }
+        if self.appState.pictureObject.isOriginalDuck {
+            Image("Duck")
+                .frame(maxWidth: 200, maxHeight: 200)
+                .imageScale(.large)
+                .aspectRatio(contentMode: .fit)
+                .background(Color(red: 135/255, green: 206/255, blue: 250/255)) //lightskyblue
+                .clipShape(Circle())
+                .overlay(
+                    Circle()
+                        .stroke(Color.white, lineWidth: 4)
+                        .shadow(radius: 3)
+                )
+        } else {
+            Image(uiImage: self.appState.pictureObject.pickedImage)
+                .resizable()
+                .frame(maxWidth: 200, maxHeight: 200)
+                .imageScale(.large)
+                .aspectRatio(contentMode: .fit)
+                .clipShape(Circle())
         }
     }
 }

@@ -10,16 +10,24 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var appState: AppState
+    @State private(set) var isShowingCredential: Bool = false
     
     var body: some View {
-        if !self.appState.audioObject.isFinished {
-            QuestionView()
-                .edgesIgnoringSafeArea(.all)
-                .background(Color(red: 144/255, green: 238/255, blue: 144/255))
-        } else {
-            AnswerView()
-                .edgesIgnoringSafeArea(.all)
-                .background(Color(red: 144/255, green: 238/255, blue: 144/255))
+        TabView {
+            ConsultView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                        .resizable()
+                        .scaledToFit()
+                    Text("相談")
+                }
+            CredentialView()
+                .tabItem {
+                    Image(systemName: "gearshape")
+                        .resizable()
+                        .scaledToFit()
+                    Text("設定")
+                }
         }
     }
 }

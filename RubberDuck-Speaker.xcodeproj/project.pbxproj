@@ -11,7 +11,6 @@
 		1B14A8562537F8CF003399CE /* Duck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14A8552537F8CF003399CE /* Duck.swift */; };
 		1B14A85B2538085E003399CE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14A85A2538085E003399CE /* Question.swift */; };
 		1B14A87525385822003399CE /* SoundPlayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14A87425385822003399CE /* SoundPlayInteractor.swift */; };
-		1B14A87A253859DB003399CE /* duck.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B14A879253859DA003399CE /* duck.mp3 */; };
 		1B30A5972531BF860040F7EE /* RubberDuck_SpeakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5962531BF860040F7EE /* RubberDuck_SpeakerApp.swift */; };
 		1B30A5992531BF860040F7EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30A5982531BF860040F7EE /* ContentView.swift */; };
 		1B30A59B2531BF880040F7EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B30A59A2531BF880040F7EE /* Assets.xcassets */; };
@@ -25,6 +24,9 @@
 		1BB5791B25388DD800C59E0B /* PhotoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5791A25388DD800C59E0B /* PhotoInteractor.swift */; };
 		1BB57920253897F900C59E0B /* ButtonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5791F253897F900C59E0B /* ButtonLayout.swift */; };
 		1BB5792825389D4000C59E0B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5792725389D4000C59E0B /* ImagePicker.swift */; };
+		1BF7C314253D6CF2003FED95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF7C313253D6CF2003FED95 /* LaunchScreen.storyboard */; };
+		1BF7C33C253D85E3003FED95 /* CredentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF7C33B253D85E3003FED95 /* CredentialView.swift */; };
+		1BF7C341253D967B003FED95 /* ConsultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF7C340253D967B003FED95 /* ConsultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,6 @@
 		1B14A8552537F8CF003399CE /* Duck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duck.swift; sourceTree = "<group>"; };
 		1B14A85A2538085E003399CE /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		1B14A87425385822003399CE /* SoundPlayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayInteractor.swift; sourceTree = "<group>"; };
-		1B14A879253859DA003399CE /* duck.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = duck.mp3; path = ../../../../Downloads/duck.mp3; sourceTree = "<group>"; };
 		1B30A5932531BF860040F7EE /* RubberDuck-Speaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RubberDuck-Speaker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B30A5962531BF860040F7EE /* RubberDuck_SpeakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubberDuck_SpeakerApp.swift; sourceTree = "<group>"; };
 		1B30A5982531BF860040F7EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +70,9 @@
 		1BB5791A25388DD800C59E0B /* PhotoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInteractor.swift; sourceTree = "<group>"; };
 		1BB5791F253897F900C59E0B /* ButtonLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLayout.swift; sourceTree = "<group>"; };
 		1BB5792725389D4000C59E0B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1BF7C313253D6CF2003FED95 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1BF7C33B253D85E3003FED95 /* CredentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialView.swift; sourceTree = "<group>"; };
+		1BF7C340253D967B003FED95 /* ConsultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +123,6 @@
 		1B30A5952531BF860040F7EE /* RubberDuck-Speaker */ = {
 			isa = PBXGroup;
 			children = (
-				1B14A879253859DA003399CE /* duck.mp3 */,
 				1B30A5C92531CB2C0040F7EE /* Interactor */,
 				1B30A5C82531CB250040F7EE /* Repository */,
 				1B30A5C52531CB170040F7EE /* UI */,
@@ -129,6 +132,7 @@
 				1B30A59A2531BF880040F7EE /* Assets.xcassets */,
 				1B30A59F2531BF880040F7EE /* Info.plist */,
 				1B30A59C2531BF880040F7EE /* Preview Content */,
+				1BF7C313253D6CF2003FED95 /* LaunchScreen.storyboard */,
 			);
 			path = "RubberDuck-Speaker";
 			sourceTree = "<group>";
@@ -193,6 +197,8 @@
 			children = (
 				1B30A5CD2531CCEF0040F7EE /* QuestionView.swift */,
 				1B30A5D22531CCFB0040F7EE /* AnswerView.swift */,
+				1BF7C33B253D85E3003FED95 /* CredentialView.swift */,
+				1BF7C340253D967B003FED95 /* ConsultView.swift */,
 			);
 			path = Sceen;
 			sourceTree = "<group>";
@@ -318,9 +324,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BF7C314253D6CF2003FED95 /* LaunchScreen.storyboard in Resources */,
 				1B30A59E2531BF880040F7EE /* Preview Assets.xcassets in Resources */,
 				1B30A59B2531BF880040F7EE /* Assets.xcassets in Resources */,
-				1B14A87A253859DB003399CE /* duck.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +352,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BB5792825389D4000C59E0B /* ImagePicker.swift in Sources */,
+				1BF7C33C253D85E3003FED95 /* CredentialView.swift in Sources */,
+				1BF7C341253D967B003FED95 /* ConsultView.swift in Sources */,
 				1B30A5992531BF860040F7EE /* ContentView.swift in Sources */,
 				1B30A5D82532C09A0040F7EE /* AppState.swift in Sources */,
 				1B30A5CE2531CCEF0040F7EE /* QuestionView.swift in Sources */,
